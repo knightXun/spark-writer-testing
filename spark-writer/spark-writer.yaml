@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: spark-writer
+spec:
+  template:
+    spec:
+      containers:
+      - name: spark-writer
+        image: knightxun/spark-writer
+        args: ["192.168.8.21","3699", "10.105.35.42:7077"]
+      restartPolicy: Never
+  backoffLimit: 4
