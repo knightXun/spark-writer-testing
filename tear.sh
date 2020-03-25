@@ -1,3 +1,3 @@
 helm uninstall spark 
 
-kubectl delete -f spark-writer.yaml
+kubectl delete -f spark-writer/spark-writer.yaml
