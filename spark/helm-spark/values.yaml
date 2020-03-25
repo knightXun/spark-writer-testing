@@ -18,7 +18,7 @@ Master:
   ContainerPort: 7077
   # Set Master JVM memory. Default 1g
   # DaemonMemory: 1g
-  ServiceType: LoadBalancer
+  ServiceType: NodePort
 
 WebUi:
   Name: webui
@@ -52,7 +52,7 @@ Zeppelin:
   Cpu: "100m"
   ServicePort: 8080
   ContainerPort: 8080
-  ServiceType: LoadBalancer
+  ServiceType: NodePort
   Ingress:
     Enabled: false
     Path: "/"
