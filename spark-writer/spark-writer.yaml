@@ -2,12 +2,32 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: spark-writer
+  labels:
+    name: spark-writer
 spec:
   template:
+    metadata:
+      labels:
+        name: spark-writer
     spec:
+      hostname: spark-writer
       containers:
       - name: spark-writer
         image: knightxun/spark-writer
-        args: ["192.168.8.21","3699"]
+        args: ["192.168.8.24","3699"]
       restartPolicy: Never
   backoffLimit: 4
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spark-writer
+spec:
+  selector:
+    name: spark-writer
+  clusterIP: None
+  ports:
+  - name: foo # Actually, no port is needed.
+    port: 1234
+    targetPort: 1234
