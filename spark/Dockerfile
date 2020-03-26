@@ -1,5 +1,2 @@
-FROM k8s.gcr.io/spark:1.5.1_v3
+FROM bitnami/spark:2.4.5-debian-10-r43
 COPY data.json /data/
-
-
-

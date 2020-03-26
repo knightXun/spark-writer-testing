@@ -1,6 +1,6 @@
 cd spark/
 
-helm install spark helm-spark/
+helm install spark helm/
 
 cd ../spark-writer
 

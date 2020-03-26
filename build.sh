@@ -2,8 +2,8 @@
 
 cd spark/
 python3 data-gen.py 
-docker build -t knightxun/spark:1.5.1 . 
-docker push knightxun/spark:1.5.1
+docker build -t knightxun/spark:2.4 . 
+docker push knightxun/spark:2.4
 
 rm -rf data.json
 

@@ -1,5 +1,5 @@
 FROM k8s.gcr.io/spark:1.5.1_v3
-RUN apt install -y wget
+RUN apt install -y wget scala
 RUN wget https://nebula-graph.oss-accelerate.aliyuncs.com/jar-packages/sst.generator-1.0.0-beta.jar -O /home/sst.generator.jar 
 ADD spark.conf /home
 ADD run.sh /root/
