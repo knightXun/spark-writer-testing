@@ -202,7 +202,7 @@ worker:
     limits: 
       cpu: 2000m
       memory: 2560Mi
-    requests: {}
+    requests: 
       cpu: 2000m
       memory: 2560Mi
 
